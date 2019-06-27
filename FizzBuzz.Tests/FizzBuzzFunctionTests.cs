@@ -62,7 +62,9 @@ namespace FizzBuzz.UnitTests.Functions
         [InlineData(15)]
         [InlineData(30)]
         [InlineData(75)]
-        public void ReturnFizzBuzzGivenValueOfBothMultiple3And5(int currentNumber)
+        [InlineData(35)]
+        [InlineData(53)]
+        public void ReturnFizzBuzzGivenValueIsDivisbleByOrHas3And5(int currentNumber)
         {
             var realOutPut = _fizzBuzzFunction.GetRealOutput(currentNumber);
 
