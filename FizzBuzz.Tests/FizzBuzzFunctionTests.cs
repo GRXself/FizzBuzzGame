@@ -48,7 +48,7 @@ namespace FizzBuzz.UnitTests.Functions
         {
             var realOutPut = _fizzBuzzFunction.GetRealOutput(currentNumber);
 
-            bool result = realOutPut.EndsWith(currentNumber.ToString());
+            bool result = realOutPut.Equals(currentNumber.ToString());
 
             Assert.True(result, $"{currentNumber} should be {currentNumber}");
         }
