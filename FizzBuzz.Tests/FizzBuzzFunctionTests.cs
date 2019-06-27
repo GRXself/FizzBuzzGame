@@ -13,14 +13,17 @@ namespace FizzBuzz.UnitTests.Functions
             _fizzBuzzFunction = new FizzBuzzFunction();
         }
 
-        [Fact]
-        public void ReturnFizzGivenValueOf3()
+        [Theory]
+        [InlineData(3)]
+        [InlineData(6)]
+        [InlineData(21)]
+        public void ReturnFizzGivenValueOf3(int currentNumber)
         {
-            var realOutPut = _fizzBuzzFunction.GetRealOutput(3);
+            var realOutPut = _fizzBuzzFunction.GetRealOutput(currentNumber);
 
             bool result = realOutPut.Equals("Fizz");
 
-            Assert.True(result, "3 should be Fizz");
+            Assert.True(result, $"{currentNumber} should be Fizz");
         }
     }
 }
