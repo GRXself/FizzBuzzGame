@@ -17,7 +17,10 @@ namespace FizzBuzz.UnitTests.Functions
         [InlineData(3)]
         [InlineData(6)]
         [InlineData(21)]
-        public void ReturnFizzGivenValueIsMultipleOf3(int currentNumber)
+        [InlineData(13)]
+        [InlineData(31)]
+        [InlineData(43)]
+        public void ReturnFizzGivenValueIsDivisibleByOrHas3(int currentNumber)
         {
             var realOutPut = _fizzBuzzFunction.GetRealOutput(currentNumber);
 
