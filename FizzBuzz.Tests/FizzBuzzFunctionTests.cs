@@ -38,5 +38,19 @@ namespace FizzBuzz.UnitTests.Functions
 
             Assert.True(result, $"{currentNumber} should be Buzz");
         }
+
+        [Theory]
+        [InlineData(1)]
+        [InlineData(2)]
+        [InlineData(4)]
+        [InlineData(98)]
+        public void RetrunOriginNumberGivenValueInNormalCase(int currentNumber)
+        {
+            var realOutPut = _fizzBuzzFunction.GetRealOutput(currentNumber);
+
+            bool result = realOutPut.EndsWith(currentNumber.ToString());
+
+            Assert.True(result, $"{currentNumber} should be {currentNumber}");
+        }
     }
 }
