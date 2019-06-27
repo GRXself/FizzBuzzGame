@@ -33,7 +33,9 @@ namespace FizzBuzz.UnitTests.Functions
         [InlineData(5)]
         [InlineData(10)]
         [InlineData(80)]
-        public void ReturnBuzzGivenValueIsMultipleOf5(int currentNumber)
+        [InlineData(52)]
+        [InlineData(56)]
+        public void ReturnBuzzGivenValueIsDivisibleByOrHas5(int currentNumber)
         {
             var realOutPut = _fizzBuzzFunction.GetRealOutput(currentNumber);
 
