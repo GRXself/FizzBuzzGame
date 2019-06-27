@@ -6,12 +6,23 @@ namespace FizzBuzz.Function
     {
         public void DoFizzBuzzGame(int countLength)
         {
-            throw new NotImplementedException("Please do it!");
+            for (int i = 1; i <= countLength; i++)
+            {
+                string realOutput = GetRealOutput(i);
+                Console.WriteLine(realOutput);
+            }
         }
 
         public string GetRealOutput(int currentNumber)
         {
-            throw new NotImplementedException("Please do it!");
+            if (currentNumber % 3 == 0)
+            {
+                return "Fizz";
+            }
+            else
+            {
+                return currentNumber.ToString();
+            }
         }
     }
 }
