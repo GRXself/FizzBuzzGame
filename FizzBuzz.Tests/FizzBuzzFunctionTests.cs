@@ -9,7 +9,7 @@ namespace FizzBuzz.UnitTests.Functions
         private readonly FizzBuzzFunction _fizzBuzzFunction;
 
         public FizzBuzzFunctionTests()
-        {
+        { 
             _fizzBuzzFunction = new FizzBuzzFunction();
         }
 

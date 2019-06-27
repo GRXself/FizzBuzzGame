@@ -15,18 +15,24 @@ namespace FizzBuzz.Function
 
         public string GetRealOutput(int currentNumber)
         {
+            string result = "";
+            bool isChanged = false;
             if (currentNumber % 3 == 0)
             {
-                return "Fizz";
+                result += "Fizz";
+                isChanged = true;
             }
-            else if (currentNumber % 5 == 0)
+            if (currentNumber % 5 == 0)
             {
-                return "Buzz";
+                result += "Buzz";
+                isChanged = true;
             }
-            else
+            if (!isChanged)
             {
-                return currentNumber.ToString();
+                result += currentNumber.ToString();
             }
+
+            return result;
         }
     }
 }
