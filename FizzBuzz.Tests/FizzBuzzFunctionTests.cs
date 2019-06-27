@@ -52,5 +52,18 @@ namespace FizzBuzz.UnitTests.Functions
 
             Assert.True(result, $"{currentNumber} should be {currentNumber}");
         }
+
+        [Theory]
+        [InlineData(15)]
+        [InlineData(30)]
+        [InlineData(75)]
+        public void ReturnFizzBuzzGivenValueOfBothMultiple3And5(int currentNumber)
+        {
+            var realOutPut = _fizzBuzzFunction.GetRealOutput(currentNumber);
+
+            bool result = realOutPut.Equals("FizzBuzz");
+
+            Assert.True(result, $"{currentNumber} should be FizzBuzz");
+        }
     }
 }
