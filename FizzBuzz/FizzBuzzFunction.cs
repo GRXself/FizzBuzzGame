@@ -19,6 +19,10 @@ namespace FizzBuzz.Function
             {
                 return "Fizz";
             }
+            else if (currentNumber % 5 == 0)
+            {
+                return "Buzz";
+            }
             else
             {
                 return currentNumber.ToString();
