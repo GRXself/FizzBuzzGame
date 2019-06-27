@@ -22,7 +22,7 @@ namespace FizzBuzz.Function
                 result += "Fizz";
                 isChanged = true;
             }
-            if (currentNumber % 5 == 0)
+            if (currentNumber % 5 == 0 || currentNumber.ToString().Contains('5'))
             {
                 result += "Buzz";
                 isChanged = true;
