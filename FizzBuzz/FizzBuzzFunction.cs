@@ -17,7 +17,7 @@ namespace FizzBuzz.Function
         {
             string result = "";
             bool isChanged = false;
-            if (currentNumber % 3 == 0)
+            if (currentNumber % 3 == 0 || currentNumber.ToString().Contains('3'))
             {
                 result += "Fizz";
                 isChanged = true;
