@@ -17,12 +17,12 @@ namespace FizzBuzz.Function
         {
             string result = "";
             bool isChanged = false;
-            if (currentNumber % 3 == 0 || currentNumber.ToString().Contains('3'))
+            if (IsContainSpecificNumber(currentNumber, 3))
             {
                 result += "Fizz";
                 isChanged = true;
             }
-            if (currentNumber % 5 == 0 || currentNumber.ToString().Contains('5'))
+            if (IsContainSpecificNumber(currentNumber, 5))
             {
                 result += "Buzz";
                 isChanged = true;
@@ -33,6 +33,11 @@ namespace FizzBuzz.Function
             }
 
             return result;
+        }
+
+        private bool IsContainSpecificNumber(int currentNumber, int specificNUmber)
+        {
+            return currentNumber % specificNUmber == 0 || currentNumber.ToString().Contains(specificNUmber.ToString());
         }
     }
 }
